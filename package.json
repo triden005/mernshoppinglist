@@ -6,9 +6,9 @@
   "scripts": {
     "client-install": "npm install --prefix clientnew",
     "start": "node server.js",
-    "server":"nodemon server.js",
-    "client":"npm start --prefix clientnew ",
-    "dev" : "concurrently \"npm run server\" \"npm run client\" "
+    "server": "nodemon server.js",
+    "client": "npm start --prefix clientnew ",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "satyam",
   "license": "ISC",
