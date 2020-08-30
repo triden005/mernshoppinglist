@@ -8,7 +8,7 @@ A simple mern shopping list that i learnt from traversy !!
  
 ## Scripts 
   * npm install   
-  * npm install clientnew
+  * npm run client-install
   * npm run dev
     * server at localhost:5000/
     * client at localhost:3000/
