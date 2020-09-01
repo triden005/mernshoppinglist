@@ -1,13 +1,13 @@
 {
   "name": "mernshoppinglist",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "shopping list with react",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
+    "client-install": "npm install --prefix clientnew",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client ",
+    "client": "npm start --prefix clientnew ",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "satyam",
