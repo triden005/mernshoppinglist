@@ -14,4 +14,6 @@ A simple mern shopping list that i learnt from traversy !!
     * client at localhost:3000/
     
     dont forget to set your db at config/key.js
-![image]https://user-images.githubusercontent.com/58325532/91798372-5ff35280-ec42-11ea-84bd-6f9447459a5c.png
+    
+    
+![image](https://user-images.githubusercontent.com/58325532/91798372-5ff35280-ec42-11ea-84bd-6f9447459a5c.png)
