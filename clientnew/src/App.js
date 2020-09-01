@@ -1,47 +1,41 @@
 import React from 'react';
-import {ThemeContext, themes} from './theme-context';
-import ThemedButton from './themed-button';
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Container} from "reactstrap"
 
-// An intermediate component that uses the ThemedButton
-function Toolbar(props) {
-  return (
-    <ThemedButton onClick={props.changeTheme}>
-      Change Theme
-    </ThemedButton>
-  );
-}
+import AppNavBar from "./components/AppNavBar"
+import ShopingList from "./components/ShoppingList";
+import ItemModal from "./components/ItemModal"
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: themes.light,
-    };
+import {Provider} from "react-redux";
 
-    this.toggleTheme = () => {
-      this.setState(state => ({
-        theme:
-          state.theme === themes.dark
-            ? themes.light
-            : themes.dark,
-      }));
-    };
+import store from "./store";
+import {loaduser } from "./action/AuthAction"
+
+class App extends React.Component{
+
+
+  componentDidMount() {
+    
+    store.dispatch(loaduser());
   }
-
-  render() {
-    // The ThemedButton button inside the ThemeProvider    // uses the theme from state while the one outside uses    // the default dark theme    
+  render(){
     return (
-      <div>
-        <ThemeContext.Provider value={this.state.theme}>
-          <Toolbar changeTheme={this.toggleTheme} />
-          </ThemeContext.Provider>
-          <div>
-            {/* <ThemedButton /> */}
+      <Provider store={store}>
+          <div className="">
+            <AppNavBar/>
+            <Container>
+              <ItemModal/>
+              <ShopingList/>
+            </Container>
+              
           </div>
-      </div>
+      </Provider>
+      
     );
+
   }
+  
 }
 
 export default App;
-
